@@ -184,14 +184,15 @@ function screen0() {
 
   fill("DarkSeaGreen");
   noStroke();
-  rect(width/2-150, 50,300,30);
+  rect(width/2-150, 50,300,40);
   
   //Create title
-  textSize(30);
+  textSize(23);
   textAlign(CENTER);
   textFont(title);
   fill(255);
   text("Grow A Plant", width/2, 80);
+  textFont('Sans-Serif');
 }
 
 function screen1() {
@@ -246,6 +247,7 @@ function screen2() {
 function screen3() {
   // clear prev
   clear();
+  background(bg2);
   catcher.image = plantE;
   catcher.vel.x=0;
   fallingObject.vel.y=0;
@@ -255,7 +257,7 @@ function screen3() {
   button1.pos = {x:-200, y:-200};
   
   //background
-  bg1.style('display', 'block');
+  //bg1.style('display', 'block');
 
   // text
   textAlign(CENTER);
