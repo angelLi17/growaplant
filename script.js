@@ -41,15 +41,18 @@ function setup() {
   backButton.color = "0,0,0";
   backButton.textSize = 20;
   backButton.textFont = 'Sans-Serif';
+  backButton.stroke = "0,0,0";
   backButton.textColor = color("DarkSeaGreen"); 
   backButton.text = "Back";
 
+  // textFont('Sans-Serif');
   //buttons
   button1 = new Sprite(width/2-100, height/2+100, 120, 50, 'k');
+  button1.color = "0,0,0";
   button1.textSize = 15;
   button1.color = "0,0,0";
   //button1.stroke = "0,0,0";
-  backButton.textFont = 'Sans-Serif';
+  button1.textFont = 'Sans-Serif';
   button1.textColor = color("DarkSeaGreen");
   button1.text = "Directions";
 
@@ -57,7 +60,7 @@ function setup() {
   button2.textSize = 15;
   button2.text = "Play";
   button2.color = "0,0,0";
-  backButton.textFont = 'Sans-Serif';
+  button2.textFont = 'Sans-Serif';
   //button2.stroke = "0,0,0";
   button2.textColor = color("DarkSeaGreen");
 
@@ -217,7 +220,7 @@ function screen1() {
 function screen2() {
   // Delete prev stuff
   clear();
-  background(bg2)
+  background(bg2);
   button2.pos = {x:-100, y:-100};
   backButton.pos = {x:-100, y:-100};
 
