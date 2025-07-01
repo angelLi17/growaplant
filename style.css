@@ -1,0 +1,11 @@
+.behind {
+  z-index: -1;
+}
+
+/* .p5Canvas {
+    position: fixed;
+    inset: 0px;
+    margin: auto;
+} */
+
+/*cursor: url(assets/cursor.png), pointer;*/
