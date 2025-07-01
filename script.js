@@ -53,10 +53,10 @@ function setup() {
 /* DRAW LOOP REPEATS */
 function draw() {
   if (screen==0) {
-    if (button1.mouse.presses()) {
+    if (button1 && button1.mouse.presses()) {
       screen=1;
       screen1();
-    } else if(button2.mouse.presses()) {
+    } else if(button2 && button2.mouse.presses()) {
       screen=2;
       screen2();
     }
@@ -169,7 +169,7 @@ function screen0() {
   button1.textSize = 15;
   button1.color = "0,0,0";
   button1.stroke = "0,0,0";
-  button1.textFont = 'Sans-Serif';
+  button1.textFont = "sans-serif";
   button1.textColor = color("DarkSeaGreen");
   button1.text = "Directions";
   
@@ -178,7 +178,7 @@ function screen0() {
   button2.text = "Play";
   button2.color = "0,0,0";
   button2.stroke = "0,0,0";
-  button2.textFont = 'Sans-Serif';
+  button2.textFont = "sans-serif";
   button2.textColor = color("DarkSeaGreen");
 
   fill("DarkSeaGreen");
