@@ -50,8 +50,6 @@ function setup() {
   button1 = new Sprite(width/2-100, height/2+100, 120, 50, 'k');
   button1.color = "0,0,0";
   button1.textSize = 15;
-  button1.color = "0,0,0";
-  //button1.stroke = "0,0,0";
   button1.textFont = 'Sans-Serif';
   button1.textColor = color("DarkSeaGreen");
   button1.text = "Directions";
