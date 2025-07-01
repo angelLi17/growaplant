@@ -1,4 +1,4 @@
-!(cover of game, raining and bunny with umbrella)[assets/Untitled_Artwork.gif]
+!(cover of game, raining and bunny with umbrella)[./assets/Untitled_Artwork.gif]
 # Grow A Plant - minigame
 A GWC Guided Project
 
