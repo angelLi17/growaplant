@@ -19,15 +19,15 @@ function preload(){
   bg1 = createImg("assets/Untitled_Artwork.gif");
   bg2 = loadImage("assets/bg2.png");
   bg3 = loadImage("assets/bg3.png");
-  cursor = loadImage("assets/cursor.png");
-  song = loadSound("assets/song.mp3");
+  // cursor = loadImage("assets/cursor.png");
+  // song = loadSound("assets/song.mp3");
 }
 
 /* SETUP RUNS ONCE */
 function setup() {
   createCanvas(400,400);
-  song.play();
-  song.loop();
+  // song.play();
+  // song.loop();
   
   //resize images
   plant1.resize(75,0);
@@ -158,7 +158,6 @@ function screen0() {
   clear();
   bg1.position(0,0);
   bg1.size(400,400);
-  //bg1.center('vertical');
   bg1.class('behind');
 
   //remove backbutton
@@ -170,7 +169,7 @@ function screen0() {
   button1.textSize = 15;
   button1.color = "0,0,0";
   button1.stroke = "0,0,0";
-  button1.textFont = 'title';
+  button1.textFont = 'Sans-Serif';
   button1.textColor = color("DarkSeaGreen");
   button1.text = "Directions";
   
@@ -179,7 +178,7 @@ function screen0() {
   button2.text = "Play";
   button2.color = "0,0,0";
   button2.stroke = "0,0,0";
-  button2.textFont = 'title';
+  button2.textFont = 'Sans-Serif';
   button2.textColor = color("DarkSeaGreen");
 
   fill("DarkSeaGreen");
