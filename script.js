@@ -16,7 +16,7 @@ function preload(){
   plantE = loadImage("assets/plantE.png");
   water = loadImage("assets/water.png");
   title = loadFont("assets/Leaves-Yy4a.ttf");
-  bg1 = createImg("assets/Untitled_Artwork.gif");
+  //bg1 = createImg("assets/Untitled_Artwork.gif");
   bg2 = loadImage("assets/bg2.png");
   bg3 = loadImage("assets/bg3.png");
   // cursor = loadImage("assets/cursor.png");
@@ -44,6 +44,23 @@ function setup() {
   backButton.textColor = color("DarkSeaGreen"); 
   backButton.text = "Back";
 
+  //buttons
+  button1 = new Sprite(width/2-100, height/2+100, 120, 50, 'k');
+  button1.textSize = 15;
+  button1.color = "0,0,0";
+  //button1.stroke = "0,0,0";
+  backButton.textFont = 'Sans-Serif';
+  button1.textColor = color("DarkSeaGreen");
+  button1.text = "Directions";
+
+  button2 = new Sprite(width/2+100, height/2+100, 120, 50, 'k');
+  button2.textSize = 15;
+  button2.text = "Play";
+  button2.color = "0,0,0";
+  backButton.textFont = 'Sans-Serif';
+  //button2.stroke = "0,0,0";
+  button2.textColor = color("DarkSeaGreen");
+
   catcher = new Sprite(plant1, -200,-200,"k");
   fallingObject = new Sprite(water, -100,-100,30);
 
@@ -53,10 +70,10 @@ function setup() {
 /* DRAW LOOP REPEATS */
 function draw() {
   if (screen==0) {
-    if (button1 && button1.mouse.presses()) {
+    if (button1.mouse.presses()) {
       screen=1;
       screen1();
-    } else if(button2 && button2.mouse.presses()) {
+    } else if(button2.mouse.presses()) {
       screen=2;
       screen2();
     }
@@ -156,30 +173,13 @@ function draw() {
 
 function screen0() {
   clear();
-  bg1.position(0,0);
-  bg1.size(400,400);
-  bg1.class('behind');
+  // bg1.position(0,0);
+  // bg1.size(400,400);
+  // bg1.class('behind');
+  background(bg2);
 
   //remove backbutton
-  backButton.pos = {x:-100, y:-100};
-
-  textFont('title');
-  //buttons
-  button1 = new Sprite(width/2-100, height/2+100, 120, 50, 'k');
-  button1.textSize = 15;
-  button1.color = "0,0,0";
-  button1.stroke = "0,0,0";
-  button1.textFont = "sans-serif";
-  button1.textColor = color("DarkSeaGreen");
-  button1.text = "Directions";
-  
-  button2 = new Sprite(width/2+100, height/2+100, 120, 50, 'k');
-  button2.textSize = 15;
-  button2.text = "Play";
-  button2.color = "0,0,0";
-  button2.stroke = "0,0,0";
-  button2.textFont = "sans-serif";
-  button2.textColor = color("DarkSeaGreen");
+  backButton.pos = {x:-100, y:-100};  
 
   fill("DarkSeaGreen");
   noStroke();
@@ -195,7 +195,7 @@ function screen0() {
 
 function screen1() {
   clear();
-  
+  background(bg2);
   textSize(15);
   textAlign(CENTER);
   textFont("Sans-Serif");
@@ -212,13 +212,12 @@ function screen1() {
   button2.pos = {x:-200, y:-200};
 
   //background
-  bg1.style('display', 'block');
 }
 
 function screen2() {
   // Delete prev stuff
   clear();
-  bg1.style('display', 'none');
+  background(bg2)
   button2.pos = {x:-100, y:-100};
   backButton.pos = {x:-100, y:-100};
 
